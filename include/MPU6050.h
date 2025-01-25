@@ -1,5 +1,4 @@
 #include <Wire.h>
-#include <Arduino.h>
 
 #define MPU6050_ADDR 0x68  // Endereço padrão do MPU6050
 //#define ACCEL_CONFIG 0x1C  // Registro de configuração do acelerômetro
@@ -36,13 +35,6 @@ void MPU_begin(){
   Wire.write(0);       // configura o gyro para 250 graus
   Wire.endTransmission(true);
 
-  /* configuração de sensibilidade do acelerômetro
-
-  Wire.beginTransmission(MPU6050_ADDR);
-  Wire.write(ACCEL_CONFIG); // 0x1c 
-  Wire.write(0);       // configura o gyro para 2g
-  Wire.endTransmission(true);
-*/
 
 }
 
