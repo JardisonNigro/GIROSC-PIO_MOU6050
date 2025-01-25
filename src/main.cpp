@@ -1,5 +1,4 @@
 #include "MPU6050.h"
-#include <Arduino.h>
 
 void setup(){
   
@@ -9,6 +8,7 @@ void setup(){
   Calibrar_Gyro();
   Serial.print("Robo calibrado, offset atual de ");
   Serial.println(gyroOffsetZ,5);
+   delay(5000);
 }
 
 void loop(){
@@ -21,6 +21,6 @@ void loop(){
   Serial.println(AngTetaZ, 10);
   Serial.println(lastTime, 10);
 
-  delay(5); // Atualização a cada 5 ms
+  delay(5); // Atualização a cada 100 ms
  
 }
